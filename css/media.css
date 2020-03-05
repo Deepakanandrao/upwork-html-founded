@@ -1,0 +1,28 @@
+@media all and (max-width: 960px){
+    .login-graphics{display: none;}
+}
+@media all and (max-width: 767px){
+    .loader-router-wrapper .branding{display: none;}
+    .login-content{padding: 0;}
+    .login-markup{
+        width: 100%;
+        max-width: none;
+        height: auto;
+        box-sizing: border-box;
+        box-shadow: rgba(37, 22, 125, 0.05) 0px 4px 8px 0px;
+        padding: 3.7rem 1.6rem 1.5rem;
+        background: rgb(255, 255, 255);
+    }
+    .branding-mobile{display: block;padding: 0.8rem 1.6rem; }
+    .login-heading {
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+    .login-heading h2{
+        font-size: 2.6rem;
+    }
+    .btn-login {
+        margin-top: 2rem;
+        width: 100%;
+    }
+}

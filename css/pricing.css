@@ -1,0 +1,767 @@
+hr {
+    margin: 2rem 0px;
+    border: medium none;
+    height: 0.2rem;
+    background: rgb(216, 214, 222) none repeat scroll 0% 0%;
+    border-radius: 0.4rem;
+    opacity: 0.5;
+    text-align: left;
+}
+
+.pricing-container {
+    width: 100%;
+    padding: 0px 1.5rem;
+    padding-top: 12.7rem;
+    flex: 1 1 auto;
+    min-height: 100vh;
+    box-sizing: border-box;
+    margin: 0px auto;
+    max-width: 97.5rem;
+}
+
+.pricing-heading {
+    text-align: center;
+    width: 100%;
+    white-space: normal;
+}
+
+.pricing-heading h4 {
+    color: rgb(141, 142, 161);
+    font-size: 1.8rem;
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.pricing-heading h1 span {
+    margin-bottom: 3rem;
+    display: block;
+}
+
+.pricing-heading h1 span:last-child {
+    margin-bottom: 0px;
+}
+
+.pricing-heading h1 {
+    font-size: 5.2rem;
+    line-height: 1.4em;
+    white-space: normal;
+}
+
+.pricing-heading h3 {
+    font-size: 2rem;
+    line-height: 1.6em;
+    font-weight: 400;
+    margin-top: 2.4rem;
+}
+
+.pricing-button button {
+    position: relative;
+    user-select: none;
+    outline: currentcolor none medium;
+    display: inline-flex;
+    -moz-box-align: center;
+    align-items: center;
+    -moz-box-pack: center;
+    justify-content: center;
+    cursor: pointer;
+    min-width: 5rem;
+    padding: 0.5rem 2rem;
+    box-sizing: border-box;
+    font-family: 'proxima-nova', sans-serif;
+    font-weight: 700;
+    margin: 0px;
+    border-radius: 0.4rem;
+    transition: color 200ms ease-out 0s, background 200ms ease-out 0s, border-color 200ms ease-out 0s, box-shadow 200ms ease-out 0s, transform 200ms ease-out 0s;
+    color: rgb(72, 67, 101);
+    background: transparent none repeat scroll 0% 0%;
+    border: 0.15rem solid rgb(72, 67, 101);
+    min-height: 4rem;
+    font-size: 1.6rem;
+    position: relative;
+    padding: 0.5rem 2rem;
+    background: rgb(255, 255, 255) none repeat scroll 0% 0%;
+    z-index: 1;
+    border-color: rgb(240, 240, 246);
+    border-radius: 0px;
+}
+
+.pricing-toggler {
+    margin-top: 5rem;
+}
+
+.pricing-button {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    margin-bottom: 4.2rem;
+}
+
+.pricing-button button:first-child {
+    border-top-left-radius: 0.4rem;
+    border-bottom-left-radius: 0.4rem;
+}
+
+.pricing-button button:last-child {
+    border-top-right-radius: 0.4rem;
+    border-bottom-right-radius: 0.4rem;
+}
+
+.pricing-button button:not(:last-child) {
+    margin-right: -0.2rem;
+}
+
+.pricing-button button.active {
+    color: rgb(87, 98, 215);
+    border: 0.15rem solid rgb(87, 98, 215);
+    border-radius: 0.4rem;
+    z-index: 3;
+}
+
+.pricing-button button:hover {
+    border-color: rgba(130, 147, 255, 0.2);
+    color: rgb(72, 67, 101);
+    background: rgba(130, 147, 255, 0.2) none repeat scroll 0% 0%;
+}
+
+.pricing-content {
+    position: relative;
+    margin-bottom: 15.2rem;
+}
+
+.pricing-content .pricing-wrap {
+    position: relative;
+}
+
+.pricing-content .pricing-wrap {
+    position: relative;
+}
+
+.pricing-content .pricing-wrap .pricing-markup {
+    transition: all 300ms ease-out 0s;
+    opacity: 1;
+    position: initial;
+    inset: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+.pricing-content .pricing-items {
+    display: flex;
+    position: relative;
+    z-index: 1;
+}
+
+.pricing-content .pricing-items .pricing-item:first-child {
+    width: 60%;
+}
+
+.pricing-content .pricing-items .pricing-item:last-child {
+    width: 40%;
+}
+
+.pricing-item .pricing-item-title {
+    height: 8rem;
+    display: flex;
+    align-items: flex-end;
+}
+
+.pricing-item .pricing-item-title h2 {
+    font-weight: 600;
+    width: 100%;
+    font-size: 2.8rem;
+}
+
+.pricing-item > hr {
+    margin: 1.2rem 0px 1.8rem;
+    width: 3rem;
+    height: 0.3rem;
+}
+
+.pricing-item .pricing-item-content {
+    padding: 3.5rem 6rem 3.2rem;
+    box-sizing: border-box;
+    height: 60rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    color: rgb(72, 67, 101);
+}
+
+.pricing-calculator {
+    display: flex;
+    -moz-box-pack: justify;
+    justify-content: space-between;
+}
+
+.pricing-calculator h2 {
+    margin-bottom: 0.4rem;
+    font-size: 8rem;
+    font-weight: 600;
+}
+
+.pricing-calculator h2 > small {
+    font-size: 0.625em;
+    color: rgb(141, 142, 161);
+    margin-right: 1rem;
+}
+
+.pricing-calculator h2 small.price-after {
+    font-size: 2rem;
+    margin-left: 1rem;
+}
+
+.pricing-calculator .price-message {
+    height: 5rem;
+}
+
+.pricing-calculator .price-message > h3 {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    color: rgb(141, 142, 161);
+    letter-spacing: 0.175rem;
+}
+
+.pricing-shadow {
+    display: flex;
+    position: absolute;
+    top: 11.2rem;
+    left: 0px;
+    width: 100%;
+    height: 60rem;
+    z-index: 0;
+    border-radius: 0.4rem;
+    background: rgb(255, 255, 255) none repeat scroll 0% 0%;
+    overflow: hidden;
+    box-shadow: rgba(91, 89, 106, 0.15) 0rem 2rem 6rem -1rem;
+}
+
+.pricing-shadow > div:first-child {
+    width: 60%;
+}
+
+.pricing-shadow > div:first-child {
+    background: rgb(255, 255, 255) none repeat scroll 0% 0%;
+    border-top-left-radius: 0.4rem;
+    border-bottom-left-radius: 0.4rem;
+}
+
+.pricing-shadow > div:last-child {
+    width: 40%;
+}
+
+.pricing-shadow > div:last-child {
+    background: rgb(72, 67, 101) none repeat scroll 0% 0%;
+    border-top-right-radius: 0.4rem;
+    border-bottom-right-radius: 0.4rem;
+}
+
+.pricing-filter {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    -moz-box-pack: end;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
+}
+
+.pricing-filter > p {
+    margin-bottom: 0.2rem;
+    color: rgb(141, 142, 161);
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.pricing-filter > div {
+    margin-bottom: 0.8rem;
+}
+
+.pricing-filter-item {
+    cursor: pointer;
+    padding: 0.8rem 1rem;
+    border-radius: 0.4rem;
+    background: rgb(255, 255, 255) none repeat scroll 0% 0%;
+    box-shadow: rgba(91, 89, 106, 0.05) 0.5rem 0.5rem 1rem 0px;
+    display: flex;
+    -moz-box-pack: justify;
+    justify-content: space-between;
+    -moz-box-align: center;
+    align-items: center;
+    user-select: none;
+    position: relative;
+    z-index: unset;
+    min-width: 10rem;
+    transition: color 200ms ease-out 0s;
+}
+
+.pricing-filter-item p {
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 1.3333em;
+}
+
+.pricing-filter-item svg {
+    color: rgb(141, 142, 161);
+    margin-left: 1rem;
+    transition: transform 200ms ease-out 0s;
+    transform: rotate(0deg);
+}
+
+.pricing-checklist {
+    flex: 1 1 0%;
+    margin-top: 1.4rem;
+    margin-bottom: 3.5rem;
+}
+
+.pricing-checklist .pricing-list-item {
+    display: flex;
+    margin: 0.8rem 0px;
+    color: inherit;
+}
+
+.pricing-checklist .pricing-list-item svg {
+    color: rgb(87, 98, 215);
+    margin-right: 2rem;
+    height: 2.4rem;
+    width: 2.4rem;
+}
+
+.pricing-checklist .pricing-list-item p {
+    margin-top: 0.1rem;
+    font-weight: 600;
+    flex: 1 1 0%;
+}
+
+.item-dark .pricing-checklist .pricing-list-item p {
+    color: rgb(255, 255, 255);
+}
+
+.item-dark .pricing-checklist .pricing-list-item svg {
+    color: rgb(255, 255, 255);
+    margin-right: 2rem;
+    height: 2.4rem;
+    width: 2.4rem;
+}
+
+.pricing-list-item.cross {
+    color: rgb(141, 142, 161);
+}
+
+.pricing-list-item.cross svg {
+    color: rgb(141, 142, 161);
+}
+
+.pricing-item-button {
+    text-align: center;
+    height: 9rem;
+    color: rgb(72, 67, 101);
+}
+
+.pricing-item-button a.primary {
+    width: 100%;
+    margin-bottom: 1rem;
+    position: relative;
+    user-select: none;
+    outline: currentcolor none medium;
+    display: inline-flex;
+    -moz-box-align: center;
+    align-items: center;
+    -moz-box-pack: center;
+    justify-content: center;
+    cursor: pointer;
+    min-width: 5rem;
+    padding: 0.5rem 2rem;
+    box-sizing: border-box;
+    font-family: 'proxima-nova', sans-serif;
+    font-weight: 700;
+    border-radius: 0.4rem;
+    transition: color 200ms ease-out 0s, background 200ms ease-out 0s, border-color 200ms ease-out 0s, box-shadow 200ms ease-out 0s, transform 200ms ease-out 0s;
+    color: rgb(255, 255, 255);
+    background: rgb(87, 98, 215) none repeat scroll 0% 0%;
+    border: medium none;
+    min-height: 5.6rem;
+    font-size: 2.2rem;
+}
+
+.pricing-item-button a.primary:after {
+    display: block;
+    content: '';
+    min-height: inherit;
+    margin: -0.5rem 0px;
+    font-size: 0px;
+}
+
+.pricing-item-button a.link-btn {
+    font-weight: 800;
+    font-size: 1.8rem;
+}
+
+.pricing-item-content.item-dark .pricing-calculator {
+    color: rgb(255, 255, 255);
+}
+
+.pricing-bottom-left {
+    padding: 1rem 3rem 1rem 0px;
+}
+
+.pricing-bottom-left h6 {
+    font-style: italic;
+    font-weight: 400;
+    color: rgb(141, 142, 161);
+    font-size: 1.4rem;
+}
+
+.pricing-bottom-right {
+    border-bottom-left-radius: 0.4rem;
+    border-bottom-right-radius: 0.4rem;
+    background: rgb(255, 255, 255) none repeat scroll 0% 0%;
+    display: flex;
+    -moz-box-align: center;
+    align-items: center;
+    -moz-box-pack: center;
+    justify-content: center;
+    padding: 1rem 0px;
+}
+
+.pricing-bottom-right svg {
+    color: rgb(87, 98, 215);
+    margin-right: 1rem;
+}
+
+.pricing-bottom-right a {
+    display: inline-block;
+    color: rgb(87, 98, 215);
+    font-size: 1.8rem;
+    font-weight: 600;
+    transition: all 200ms ease-out 0s;
+}
+
+.pricing-bg-bottom-left {
+    position: absolute;
+    top: 10rem;
+    right: -10rem;
+    z-index: -1;
+}
+
+.pricing-bg-top-right {
+    position: absolute;
+    bottom: 5rem;
+    left: -8rem;
+    z-index: -1;
+}
+
+/*pricing-features*/
+.pricing-features {
+
+}
+
+.features-heading {
+    text-align: center;
+    width: 100%;
+}
+
+.features-heading h1 {
+    font-size: 4.2rem;
+}
+
+.features-heading h1 {
+    margin-bottom: 0px;
+    display: block;
+}
+
+.features-heading > h3 {
+    margin-top: 1.2rem;
+    font-size: 2rem;
+    line-height: 1.6em;
+    font-weight: 400;
+
+}
+
+.features-heading h4 {
+    color: rgb(87, 98, 215);
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+    margin-bottom: 1.6rem;
+}
+
+.features-compare-wrap {
+    margin-top: 5rem;
+    width: 100%;
+}
+
+.features-compare {
+    display: flex;
+}
+
+.features-compare [class^='compare-'] {
+    flex: 1 1 0%;
+    box-sizing: border-box;
+    border-color: rgb(240, 240, 246) transparent transparent rgb(240, 240, 246);
+    border-style: solid;
+    border-width: 0.1rem;
+    border-image: none 100% / 1 / 0 stretch;
+    display: flex;
+    -moz-box-align: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 1.4rem 2.4rem;
+    flex-direction: column;
+    -moz-box-pack: end;
+    justify-content: flex-end;
+}
+
+.btn-violate {
+    position: relative;
+    user-select: none;
+    outline: currentcolor none medium;
+    display: inline-flex;
+    -moz-box-align: center;
+    align-items: center;
+    -moz-box-pack: center;
+    justify-content: center;
+    cursor: pointer;
+    min-width: 5rem;
+    box-sizing: border-box;
+    font-family: 'proxima-nova', sans-serif;
+    font-weight: 700;
+    margin: 0px;
+    border-radius: 0.4rem;
+    transition: color 200ms ease-out 0s, background 200ms ease-out 0s, border-color 200ms ease-out 0s, box-shadow 200ms ease-out 0s, transform 200ms ease-out 0s;
+    color: rgb(255, 255, 255);
+    background: rgb(87, 98, 215) none repeat scroll 0% 0%;
+    border: medium none;
+    min-height: 3rem;
+    font-size: 1.6rem;
+    padding: 0.5rem 1rem;
+}
+
+.btn-violate:after {
+    display: block;
+    content: '';
+    min-height: inherit;
+    margin: -0.5rem 0px;
+    font-size: 0px;
+}
+
+.features-compare [class^='compare-']:first-child {
+    width: 40.5rem;
+    flex: 0 0 auto;
+    border: 0.1rem solid transparent;
+}
+
+.features-compare [class^='compare-'] a {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.features-compare [class^='compare-'] > p {
+    font-weight: 600;
+    color: rgb(72, 67, 101);
+    font-size: 1.5rem;
+}
+
+.features-compare [class^='compare-'] > h3 {
+    font-size: 4rem;
+    color: rgb(72, 67, 101);
+}
+
+.features-compare [class^='compare-'] > h5 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: rgb(141, 142, 161);
+}
+
+.features-compare [class^='compare-']:not(:first-child) {
+    color: rgb(141, 142, 161);
+    text-align: center;
+}
+
+.features-compare [class^='compare-']:last-child {
+    border-top-color: rgb(141, 142, 161);
+    border-left-color: transparent;
+    background: rgb(72, 67, 101) none repeat scroll 0% 0%;
+    color: rgb(255, 255, 255);
+}
+
+.features-compare [class^='compare-']:last-child > p {
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+}
+
+.features-compare [class^='compare-']:last-child > h3 {
+    color: rgb(255, 255, 255);
+}
+
+.features-compare [class^='compare-']:last-child > h5 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: rgb(141, 142, 161);
+}
+
+.pricing-item-row {
+    display: flex;
+}
+
+.pricing-item-heading {
+    flex: 1 1 0%;
+    box-sizing: border-box;
+    padding: 5rem 1.6rem 0px;
+    border-color: rgb(240, 240, 246) transparent transparent rgb(240, 240, 246);
+    border-width: 0.1rem;
+    border-style: none solid solid dashed;
+    border-image: none 100% / 1 / 0 stretch;
+    display: flex;
+    -moz-box-align: center;
+    align-items: center;
+    -moz-box-pack: start;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+
+.pricing-item-heading:first-child {
+    width: 40.5rem;
+    flex: 0 0 auto;
+}
+
+.pricing-item-element {
+    flex: 1 1 0%;
+    box-sizing: border-box;
+    padding: 1.6rem;
+    border-color: rgb(240, 240, 246) transparent transparent rgb(240, 240, 246);
+    border-style: solid solid solid dashed;
+    border-width: 0.1rem;
+    border-image: none 100% / 1 / 0 stretch;
+    display: flex;
+    -moz-box-align: center;
+    align-items: center;
+    -moz-box-pack: start;
+    justify-content: flex-start;
+    overflow: hidden;
+    border-top-color: transparent;
+}
+
+.pricing-item-element:not(:first-child) {
+    color: rgb(141, 142, 161);
+    text-align: center;
+}
+
+.pricing-element-heading {
+    flex: 1 1 0%;
+    box-sizing: border-box;
+    padding: 1.6rem;
+    border-color: rgb(240, 240, 246) transparent transparent rgb(240, 240, 246);
+    border-style: solid;
+    border-width: 0.1rem;
+    border-image: none 100% / 1 / 0 stretch;
+    display: flex;
+    -moz-box-align: center;
+    align-items: center;
+    -moz-box-pack: start;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+
+.pricing-element-heading:first-child {
+    width: 40.5rem;
+    flex: 0 0 auto;
+}
+
+.pricing-element-item {
+    flex: 1 1 0%;
+    box-sizing: border-box;
+    padding: 1.6rem;
+    border-color: rgb(240, 240, 246) transparent transparent rgb(240, 240, 246);
+    border-style: solid;
+    border-width: 0.1rem;
+    border-image: none 100% / 1 / 0 stretch;
+    display: flex;
+    -moz-box-align: center;
+    align-items: center;
+    -moz-box-pack: center;
+    justify-content: center;
+    overflow: hidden;
+    text-align: center;
+}
+
+.pricing-element-item:not(:first-child) {
+    color: rgb(87, 98, 215);
+    text-align: center;
+}
+
+.pricing-element-item:last-child {
+    border-top-color: rgb(141, 142, 161);
+    border-left-color: transparent;
+    background: rgb(72, 67, 101) none repeat scroll 0% 0%;
+    color: rgb(255, 255, 255);
+}
+
+.heading-inner .pricing-element-heading {
+    padding: 5rem 1.6rem 0px;
+    border-color: rgb(240, 240, 246) transparent transparent rgb(240, 240, 246);
+    border-width: 0.1rem;
+    border-style: solid solid solid dashed;
+    border-image: none 100% / 1 / 0 stretch;
+}
+
+.heading-inner .pricing-element-heading h2 {
+    font-size: 3.5rem;
+    font-weight: 600;
+    display: inline;
+    margin-right: 1rem;
+}
+
+.heading-inner .pricing-element-item {
+    border-style: solid solid solid dashed;
+}
+
+.pricing-element-heading p span {
+    color: rgb(216, 214, 222);
+    display: inline-flex;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.addons-wrap {
+    text-align: center;
+    width: 100%;
+    white-space: pre-line;
+    margin-top: 15rem;
+}
+
+.addons-wrap .heading h2 {
+    font-size: 3.6rem;
+}
+
+.addons-wrap .heading h3 {
+    margin-top: 1.2rem;
+    font-size: 2rem;
+    line-height: 1.6em;
+    font-weight: 400;
+}
+
+.addon-items {
+    margin-top: 3.4rem;
+}
+.addon-item {
+    padding: 0px;
+    min-height: 0px;
+    border: 0.1rem solid rgb(240, 240, 246);
+    position: relative;
+    border-radius: 0.4rem;
+    transition: all 200ms ease-out 0s;
+    box-sizing: border-box;
+    box-shadow: transparent 0px 3rem 6rem -1rem;
+    background: rgb(255, 255, 255) none repeat scroll 0% 0%;
+}
+
+.addon-item:hover {
+    z-index: 2;
+    box-shadow: rgba(91, 89, 106, 0.05) 0px 3rem 6rem -1rem;
+}
+
+.addon-item:not(:last-child) {
+    margin-bottom: 2rem;
+}

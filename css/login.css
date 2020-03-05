@@ -1,0 +1,820 @@
+*, ::after, ::before {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+.position-relative {position: relative;}
+
+html {
+    font-size: 62.5%;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    text-rendering: optimizelegibility;
+    font: 400 16px 'Open Sans', sans-serif;
+    background-color: #fafafa;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.2;
+    color: #2c5586;
+}
+
+fieldset {
+    min-width: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+.loader-router-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.branding {
+    display: flex;
+    -moz-box-pack: center;
+    justify-content: center;
+    width: 7.2rem;
+    height: 100%;
+    background: rgb(87, 98, 215) none repeat scroll 0% 0%;
+    padding-top: 2.4rem;
+    position: fixed;
+    z-index: 1;
+}
+
+.branding a {
+    color: white;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+.login-content {
+    display: flex;
+    padding-left: 7.2rem;
+    overflow: hidden;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.login-form {
+    flex: 1 1 0%;
+    display: flex;
+    background: rgb(255, 255, 255) none repeat scroll 0% 0%;
+}
+
+.login-graphics {
+    flex: 1 1 0%;
+    background: rgb(247, 248, 251) none repeat scroll 0% 0%;
+    display: flex;
+    -moz-box-align: center;
+    align-items: center;
+    -moz-box-pack: center;
+    justify-content: center;
+    overflow: visible;
+    position: relative;
+}
+
+.login-graphics > svg {
+    position: absolute;
+    height: auto;
+    width: 125%;
+    max-width: 75rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-45%, -50%);
+}
+
+.branding-mobile {display: none;}
+
+.login-markup {
+    flex: 1 1 0%;
+    display: flex;
+    flex-direction: column;
+    margin: 0px auto;
+    max-width: 36.8rem;
+    padding: 16.5rem 1.5rem;
+    box-sizing: content-box;
+}
+
+.login-heading {
+    margin-bottom: 2.5rem;
+}
+
+.login-heading h2 {
+    font-family: 'source-serif-pro', serif;
+    font-weight: 700;
+    font-style: normal;
+    text-decoration: none;
+    letter-spacing: normal;
+    white-space: pre-line;
+    color: rgb(72, 67, 101);
+    margin: 0px;
+    font-size: 4.2rem;
+    line-height: 1.3em;
+}
+
+.login-form-wrap {
+    flex-shrink: 0;
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-row {
+    margin: 0.5rem 0px;
+    display: inline-flex;
+    flex-direction: column;
+    vertical-align: top;
+    box-sizing: content-box;
+    width: auto;
+    overflow: hidden;
+    min-width: 120px;
+    font-family: 'proxima-nova', sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: rgb(72, 67, 101);
+}
+
+.input-container {
+    position: relative;
+    width: 100%;
+    height: 1em;
+    min-height: 4.4rem;
+    margin: 0.8rem 0px 0.5rem;
+}
+
+.form-row input, .form-row textarea, .form-row span {
+    font-family: inherit;
+}
+
+.input-label {
+    user-select: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    max-width: calc(100% - 4rem);
+    white-space: nowrap;
+    transition: all 250ms cubic-bezier(0.165, 0.85, 0.45, 1) 0s;
+    opacity: 1;
+    transform-origin: left center 0px;
+    transform: translate(44px, 1.2rem) scale(1);
+    color: rgb(141, 142, 161);
+}
+
+.input-container:hover .input-label {
+    transform: translate(18px, -0.9rem) scale(.72);
+}
+
+.input-container:hover fieldset {
+    padding: 0 0 0 10px;
+    border-color: rgb(87, 98, 215);
+    border-width: 0.2rem;
+}
+
+.input-container:hover fieldset[email] legend {
+    width: 38.8px;
+}
+
+.input-container:hover fieldset[password] legend {
+    width: 60.4px;
+}
+
+.input-control {
+    outline: currentcolor none medium;
+    border: medium none;
+    background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%;
+    font-size: inherit;
+    color: inherit;
+    flex: 1 1 0%;
+    text-overflow: ellipsis;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.input-box > * {
+    transition: opacity 200ms ease-out 0s;
+    opacity: 0;
+    padding: 1.2rem 1.4rem;
+}
+
+.input-box {
+    transition: background 200ms ease-out 0s, opacity 200ms ease-out 0s;
+    opacity: 1;
+    background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%;
+    border-radius: 5px;
+    color: rgb(72, 67, 101);
+    display: flex;
+    -moz-box-align: center;
+    align-items: center;
+    height: 100%;
+}
+
+.input-box::before {
+    content: '​';
+}
+
+.input-box > .input-icon {
+    color: rgb(216, 214, 222);
+}
+
+.input-box > :first-child {
+    padding-left: 1.6rem;
+}
+
+.input-icon {
+    transition: opacity 200ms ease-out 0s, color 200ms ease-out 0s;
+    display: flex;
+    -moz-box-align: center;
+    align-items: center;
+    padding: 0px;
+    opacity: 1;
+}
+
+.input-container fieldset {
+    pointer-events: none;
+    position: absolute;
+    inset: 0px;
+    margin: 0px;
+    padding: 0px 0px 0px 23.68px;
+    transition: padding-left 250ms cubic-bezier(0.165, 0.85, 0.45, 1) 0s, border-color 250ms cubic-bezier(0.165, 0.85, 0.45, 1) 0s;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 0.1rem;
+    border-color: rgb(240, 240, 246);
+    z-index: 1;
+}
+
+.input-container fieldset {
+    pointer-events: none;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    z-index: 1;
+    margin: 0px;
+    padding: 0px 0px 0px 23.68px;
+    transition: padding-left 250ms cubic-bezier(0.165, 0.85, 0.45, 1) 0s, border-color 250ms cubic-bezier(0.165, 0.85, 0.45, 1) 0s;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 0.1rem;
+    border-color: rgb(240, 240, 246);
+}
+
+.input-container fieldset > legend {
+    padding: 0px;
+    transition: width 100ms ease-out 0s;
+    width: 0px;
+}
+
+.forget-password {
+    margin-top: 1rem;
+    display: flex;
+    -moz-box-pack: end;
+    justify-content: flex-end;
+}
+
+.forget-password a {
+    font-family: 'proxima-nova', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    font-style: normal;
+    text-decoration: none;
+    letter-spacing: normal;
+    line-height: normal;
+    white-space: nowrap;
+    cursor: pointer;
+    color: rgb(87, 98, 215);
+    transition: all 200ms ease-out 0s;
+    outline: currentcolor none medium;
+}
+
+.forget-password a:before {
+    content: '​';
+}
+
+.btn-login {
+    color: rgb(255, 255, 255);
+    background: rgb(87, 98, 215) none repeat scroll 0% 0%;
+    border: medium none;
+    position: relative;
+    user-select: none;
+    outline: currentcolor none medium;
+    vertical-align: baseline;
+    display: inline-flex;
+    -moz-box-align: center;
+    align-items: center;
+    -moz-box-pack: justify;
+    justify-content: space-between;
+    cursor: pointer;
+    min-width: 5rem;
+    box-sizing: border-box;
+    font-family: 'proxima-nova', sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: color 200ms ease-out 0s, background 200ms ease-out 0s, border-color 200ms ease-out 0s;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 4.4rem;
+    font-size: 1.6rem;
+    padding: 0px 2rem;
+    margin-top: 4rem;
+    width: 15rem;
+}
+
+.btn-flex {
+    flex: 1 0 auto;
+    display: flex;
+    -moz-box-pack: center;
+    justify-content: center;
+}
+
+.btn-flex .btn-text {
+    height: auto;
+    width: 43.3667px;
+    overflow: hidden;
+    transition: width 200ms ease-out 0s, height 200ms ease-out 0s;
+}
+
+.login-signup {
+    display: flex;
+    flex-direction: column;
+    -moz-box-pack: end;
+    justify-content: flex-end;
+    -moz-box-align: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.login-signup .login-hr {
+    width: 100%;
+    margin: 2rem 0px;
+    border-top: 0.1rem solid rgb(240, 240, 246);
+}
+
+.login-signup p {
+    font-family: 'proxima-nova', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    letter-spacing: normal;
+    color: rgb(72, 67, 101);
+    background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%;
+    margin: 0px;
+    font-size: 1.6rem;
+    line-height: 1.3em;
+}
+
+.signup-container svg:not(:root) {
+    overflow: hidden;
+}
+
+.signup-container {
+    display: flex;
+    padding-left: 7.2rem;
+    overflow: hidden;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.signup-wrapper {
+    flex: 1 1 0%;
+    display: flex;
+    background: rgb(247, 248, 251) none repeat scroll 0% 0%;
+}
+
+.signup-innerWrap {
+    padding: 0px 3rem;
+    width: 100%;
+}
+
+.signup-content {
+    margin: 0px auto;
+    max-width: 952px;
+    width: 100%;
+    padding-top: 7.2rem;
+    padding-bottom: 5rem;
+    position: relative;
+}
+
+.signup-content > svg {
+    position: absolute;
+}
+
+.signup-content > svg:nth-child(1) {
+    top: 22rem;
+    left: -6rem;
+}
+
+.signup-content > svg:nth-child(2) {
+    top: 63.5rem;
+    right: -5rem;
+}
+
+.content-block {
+    border-radius: 5px;
+    box-shadow: rgba(37, 22, 125, 0.05) 0px 4px 8px 0px;
+    background: rgb(255, 255, 255) none repeat scroll 0% 0%;
+    font-family: 'proxima-nova', sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: rgb(72, 67, 101);
+}
+
+.content-block.block-heading {
+    padding: 3rem 16rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.block-heading > div > svg {
+    position: absolute;
+    top: -0.5rem;
+    left: 3rem;
+    z-index: 1;
+}
+
+.content-block.block-heading h2 {
+    font-family: 'source-serif-pro', serif;
+    font-weight: 700;
+    font-style: normal;
+    text-decoration: none;
+    letter-spacing: normal;
+    white-space: pre-line;
+    color: rgb(72, 67, 101);
+    margin: 0px;
+    font-size: 4.2rem;
+    line-height: 1.3em;
+}
+
+.content-block.block-heading h5 {
+    font-family: 'proxima-nova', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    letter-spacing: normal;
+    color: rgb(72, 67, 101);
+    background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%;
+    margin: 0px;
+    font-size: 2rem;
+    line-height: 1.6em;
+}
+
+.content-block.block-content {
+    padding: 6.5rem 16rem 10rem;
+    margin: 1.6rem 0px;
+    position: relative;
+    min-height: 46.5rem;
+}
+
+.registration-content {
+    transition: opacity 200ms ease-out 0s;
+    opacity: 1;
+    height: 100%;
+    width: 100%;
+}
+
+.registration-content h5 {
+    font-weight: 600;
+    margin-bottom: 3.2rem;
+    font-family: 'proxima-nova', sans-serif;
+    font-style: normal;
+    text-decoration: none;
+    letter-spacing: normal;
+    color: rgb(72, 67, 101);
+    background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%;
+    font-size: 2.4rem;
+    line-height: 1.6em;
+    margin-top: 0;
+}
+
+.registration-content p {
+    font-family: 'proxima-nova', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    letter-spacing: normal;
+    color: rgb(72, 67, 101);
+    background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%;
+    margin: 0px;
+    font-size: 1.6rem;
+    line-height: 1.3em;
+}
+
+.registration-btn-container {
+    display: flex;
+    margin-top: 4rem;
+}
+
+.registration-btn-container button {
+    color: rgb(72, 67, 101);
+    background: transparent none repeat scroll 0% 0%;
+    border: 0.2rem solid rgb(240, 240, 246);
+    width: 12.8rem;
+    height: auto;
+    padding: 2.3rem 0px;
+    position: relative;
+    user-select: none;
+    outline: currentcolor none medium;
+    vertical-align: baseline;
+    display: inline-flex;
+    -moz-box-align: center;
+    align-items: center;
+    -moz-box-pack: justify;
+    justify-content: space-between;
+    cursor: pointer;
+    min-width: 5rem;
+    box-sizing: border-box;
+    font-family: 'proxima-nova', sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: color 200ms ease-out 0s, background 200ms ease-out 0s, border-color 200ms ease-out 0s;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 1.6rem;
+}
+
+.registration-btn-container > button:not(:first-child) {
+    margin-left: 2rem;
+}
+
+.registration-btn-container button:hover {
+    color: rgb(87, 98, 215);
+    border-color: rgb(87, 98, 215);
+    background: rgba(104, 117, 255, 0.2) none repeat scroll 0% 0%;
+}
+
+.btn-back {
+    background: transparent;
+    border-width: 0.2rem;
+    border-style: solid;
+    border-color: rgb(240, 240, 246);
+    border-image: initial;
+    position: absolute;
+    top: 6.7rem;
+    left: 9rem;
+    min-width: 0px;
+    width: 3.2rem !important;
+    height: 3.2rem !important;
+    border-radius: 50%;
+    padding: 0px;
+    user-select: none;
+    vertical-align: baseline;
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    cursor: pointer;
+    box-sizing: border-box;
+    font-family: proxima-nova, sans-serif;
+    font-weight: 700;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 1.6rem;
+    outline: none;
+    text-decoration: none;
+    transition: color 200ms ease-out 0s, background 200ms ease-out 0s, border-color 200ms ease-out 0s;
+    overflow: hidden;
+}
+
+.btn-back:hover {
+    border-color: rgb(216, 214, 222);
+}
+
+.btn-icon-text {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    flex: 1 0 auto;
+}
+
+.btn-icon-text > div {
+    height: auto;
+    overflow: hidden;
+    transition: width 200ms ease-out 0s, height 200ms ease-out 0s;
+}
+
+.btn-icon-text > div > div {
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    vertical-align: top;
+}
+
+.btn-icon-text svg {
+    height: 1.2em;
+    width: auto;
+    margin-left: -0.2rem;
+}
+
+.registration-btn-container button .btn-inner-wrap {
+    flex: 1 0 auto;
+    display: flex;
+    -moz-box-pack: center;
+    justify-content: center;
+}
+
+.registration-btn-container button .btn-inner-content {
+    height: auto;
+    overflow: hidden;
+    transition: width 200ms ease-out 0s, height 200ms ease-out 0s;
+}
+
+.registration-step h5 {
+
+}
+
+.registration-step .select-wrap {
+    display: flex;
+    -moz-box-align: baseline;
+    align-items: baseline;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.registration-step .select-wrap span {
+    margin-right: 0.5em;
+}
+
+.select-dropdown {
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    vertical-align: top;
+    box-sizing: content-box;
+    width: auto;
+    overflow: hidden;
+    min-width: 120px;
+    cursor: pointer;
+}
+
+.select-dropdown > * {
+    margin: 0px;
+}
+
+.select-dropdown fieldset {
+    pointer-events: none;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    z-index: 1;
+    margin: 0px;
+    padding: 0px 0px 0px 10px;
+    transition: padding-left 250ms cubic-bezier(0.165, 0.85, 0.45, 1) 0s, border-color 250ms cubic-bezier(0.165, 0.85, 0.45, 1) 0s;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 0.1rem;
+    border-color: rgb(240, 240, 246);
+}
+
+.select-dropdown .dropdown-label {
+    transition: background 200ms ease-out 0s, opacity 200ms ease-out 0s;
+    opacity: 1;
+    background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%;
+    border-radius: 5px;
+    color: rgb(72, 67, 101);
+    display: flex;
+    -moz-box-align: center;
+    align-items: center;
+    height: 100%;
+}
+
+.dropdown-icon {
+    transition: opacity 200ms ease-out 0s, color 200ms ease-out 0s;
+    display: flex;
+    -moz-box-align: center;
+    align-items: center;
+    padding: 0px;
+    opacity: 1;
+}
+
+.dropdown-item {
+    opacity: 1;
+    color: rgb(72, 67, 101);
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    height: 100%;
+    transition: background 200ms ease-out 0s, opacity 200ms ease-out 0s;
+    background: none;
+    border-radius: 5px;
+}
+
+.dropdown-item > * {
+    opacity: 1;
+    transition: opacity 200ms ease-out 0s;
+    padding: 1.2rem 1.4rem;
+}
+
+.btn-submit {
+    background: rgb(73, 83, 182) none repeat scroll 0% 0%;
+    color: rgb(255, 255, 255);
+    margin-top: 1.2rem;
+    position: relative;
+    user-select: none;
+    border: medium none;
+    outline: currentcolor none medium;
+    vertical-align: baseline;
+    display: inline-flex;
+    -moz-box-align: center;
+    align-items: center;
+    -moz-box-pack: justify;
+    justify-content: space-between;
+    cursor: pointer;
+    min-width: 5rem;
+    box-sizing: border-box;
+    font-family: 'proxima-nova', sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: color 200ms ease-out 0s, background 200ms ease-out 0s, border-color 200ms ease-out 0s;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 4.4rem;
+    font-size: 1.6rem;
+    padding: 0px 2rem;
+    width: 10rem;
+}
+
+.btn-group-container {
+    display: flex;
+    margin-top: 4rem;
+}
+
+.fOpoyW.fOpoyW {
+    color: rgb(87, 98, 215);
+    background: transparent;
+    border-width: 0.2rem;
+    border-style: solid;
+    border-color: rgb(87, 98, 215);
+    border-image: initial;
+}
+
+.btn-group-container > button:not(:first-child) {
+    margin-left: 2rem;
+}
+
+@media (hover: hover) {
+    .btn-outline-light:hover {
+        background: rgba(104, 117, 255, 0.2);
+    }
+}
+
+.btn-outline-light {
+    color: rgb(87, 98, 215);
+    background: transparent;
+    border-width: 0.2rem;
+    border-style: solid;
+    text-align: center;
+    border-color: rgb(87, 98, 215);
+    border-image: initial;
+    width: 10rem;
+    position: relative;
+    user-select: none;
+    vertical-align: baseline;
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    justify-content: center;
+    cursor: pointer;
+    min-width: 5rem;
+    box-sizing: border-box;
+    font-family: proxima-nova, sans-serif;
+    font-weight: 700;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    height: 4.4rem;
+    font-size: 1.6rem;
+    outline: none;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: color 200ms ease-out 0s, background 200ms ease-out 0s, border-color 200ms ease-out 0s;
+    overflow: hidden;
+    padding: 0px 2rem;
+}
