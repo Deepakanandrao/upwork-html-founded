@@ -725,10 +725,12 @@ hr {
 }
 
 .addons-wrap {
-    text-align: center;
     width: 100%;
-    white-space: pre-line;
     margin-top: 15rem;
+}
+
+.addons-wrap .heading {
+    text-align: center;
 }
 
 .addons-wrap .heading h2 {
@@ -745,23 +747,143 @@ hr {
 .addon-items {
     margin-top: 3.4rem;
 }
+
+.addon-items > div:not(:last-child) {
+    margin-bottom: 2rem;
+}
+
 .addon-item {
-    padding: 0px;
-    min-height: 0px;
-    border: 0.1rem solid rgb(240, 240, 246);
+    min-height: 0;
+    padding: 0;
+    border-width: 0.1rem;
+    border-style: solid;
+    border-color: rgb(240, 240, 246);
+    border-image: initial;
     position: relative;
+    box-sizing: border-box;
+    box-shadow: transparent 0 3rem 6rem -1rem;
     border-radius: 0.4rem;
     transition: all 200ms ease-out 0s;
+    background: rgb(255, 255, 255);
+}
+
+.addon-item .item-heading {
+    cursor: pointer;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    user-select: none;
+    padding: 2rem 4rem;
+    outline: none;
+}
+
+.addon-item .item-heading > div {
+    text-overflow: ellipsis;
+    font-weight: 600;
+    margin-right: 2.6rem;
+    flex: 1 1 0%;
+    overflow: hidden;
+    transition: color 200ms ease-out 0s;
+}
+
+.addon-item .item-heading > svg {
+    transform: rotate(180deg);
+    color: rgb(141, 142, 161);
+    transition: all 200ms ease-out 0s;
+}
+
+.addon-item .item-heading .heading-content {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    padding-left: 3rem;
+}
+
+.item-heading .heading-content > div:last-child {
+    text-align: right;
+    margin-left: 5rem;
+    margin-top: -1rem;
+}
+
+.item-heading .heading-content > div:first-child > h2 {
+    font-weight: 600;
+    font-size: 3.5rem;
+    line-height: 3.6rem;
+    white-space: pre-line;
+    margin-bottom: 0.7rem;
+}
+
+.item-heading .heading-content a.more-link {
+    display: inline-block;
+    color: rgb(87, 98, 215);
+    font-size: 1.8rem;
+    font-weight: 600;
+    transition: all 200ms ease-out 0s;
+}
+
+.item-heading .heading-content > div:last-child > h2 {
+    font-size: 7rem;
+}
+
+.item-heading .heading-content > div:last-child > h2 > small {
+    font-size: 0.625em;
+    color: rgb(141, 142, 161);
+    margin-right: 1rem;
+}
+
+.item-heading .heading-content > div:last-child > h4 {
+    margin-top: -0.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: rgb(141, 142, 161);
+}
+
+.item-heading > svg {
+    transform: rotate(180deg);
+    color: rgb(141, 142, 161);
+    transition: all 200ms ease-out 0s;
+}
+
+.item-content-wrap {
+    height: 260.8px;
+    overflow: hidden;
+    transition: height 200ms ease-out 0s;
+    background: rgb(247, 248, 251);
+}
+
+.item-content-wrap .item-content {
+    opacity: 1;
+    position: initial;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    height: 100%;
+    width: 100%;
+    transition: all 200ms ease-out 0s;
+}
+
+.item-content .item-content-spacing {
     box-sizing: border-box;
-    box-shadow: transparent 0px 3rem 6rem -1rem;
-    background: rgb(255, 255, 255) none repeat scroll 0% 0%;
+    padding: 2rem 6.5rem;
 }
 
-.addon-item:hover {
-    z-index: 2;
-    box-shadow: rgba(91, 89, 106, 0.05) 0px 3rem 6rem -1rem;
+.item-content .item-content-list {
+    text-align: left;
 }
 
-.addon-item:not(:last-child) {
-    margin-bottom: 2rem;
+.item-content .item-content-list > li {
+    color: rgb(141, 142, 161);
+}
+
+.item-content .item-content-list > li > p {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    color: rgb(72, 67, 101);
+    font-size: 1.5rem;
+    font-weight: 400;
 }
